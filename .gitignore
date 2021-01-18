@@ -1,0 +1,14 @@
+.idea
+.bsp
+.cache
+.history
+dist/*
+target/
+
+
+# ENSIME specific
+.ensime_cache/
+.ensime
+
+docker-compose.override.yaml
+cassandra/
