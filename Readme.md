@@ -2,11 +2,25 @@
 
 Bare minimum project to replicate the offsetstore being reset to 0, when the cassandra cluster goes down.
 
+Create the config paths
+```
+mkdir -p cassandra/cassandra-1/config
+mkdir -p cassandra/cassandra-1/data
+mkdir -p cassandra/cassandra-1/logs
+mkdir -p cassandra/cassandra-2/config
+mkdir -p cassandra/cassandra-2/data
+mkdir -p cassandra/cassandra-2/logs
+mkdir -p cassandra/cassandra-3/config
+mkdir -p cassandra/cassandra-3/data
+mkdir -p cassandra/cassandra-3/logs
+```
+
 Start cassandra docker
 ```
 # do not run as daemon so it's easy to kill the process
 docker-compose up
 ```
+
 
 Run the app
 ```
