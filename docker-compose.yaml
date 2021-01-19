@@ -36,9 +36,6 @@ services:
     volumes:
       - ./cassandra/cassandra-2/data:/var/lib/cassandra
       - ./cassandra/cassandra-2/logs:/var/log/cassandra
-    depends_on:
-      cassandra-1:
-        condition: service_healthy
 
   cassandra-3:
     image: cassandra:3.11.3
@@ -51,5 +48,5 @@ services:
       - ./cassandra/cassandra-3/data:/var/lib/cassandra
       - ./cassandra/cassandra-3/logs:/var/log/cassandra
     depends_on:
-      cassandra-2:
+      cassandra-1:
         condition: service_healthy
