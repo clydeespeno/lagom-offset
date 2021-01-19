@@ -35,7 +35,7 @@ services:
     environment: *environment
     volumes:
       - ./cassandra/cassandra-2/data:/var/lib/cassandra
-      - ./cassandra/cassandra-3/logs:/var/log/cassandra
+      - ./cassandra/cassandra-2/logs:/var/log/cassandra
     depends_on:
       cassandra-1:
         condition: service_healthy
